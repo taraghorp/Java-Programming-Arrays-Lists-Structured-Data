@@ -28,9 +28,12 @@ public class WordsInFiles {
 		.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		
 		int numberOfUniqueWords = wordFreq.size(); //4932
+		System.out.println("There are " + numberOfUniqueWords);
 		
 		String wordMostOften = wordFreq.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey(); //the
+		System.out.println("word most often " + wordMostOften);
 		Long mostOftenTimes = wordFreq.entrySet().stream().max(Map.Entry.comparingByValue()).get().getValue(); //692
+		System.out.println("word most often times " + mostOftenTimes);
 		
 	}
 
